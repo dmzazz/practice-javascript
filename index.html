@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+
+    <!-- CDN TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/css/style.css" />
+
+    <!-- Include JavaScript File -->
+    <script src="/src/js/script.js"></script>
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="flex pl-40 py-16">
+      <!-- Side Left -->
+      <div class="side-left w-[28%]">
+        <span class="absolute -z-50 -translate-y-20 -translate-x-40"> <img src="/src/images/Vector.png" /></span>
+        <p class="font-semibold text-6xl text-[#0A3749] mt-20 mb-12 leading-normal z-10">User research made easy and fun.</p>
+        <p class="font-medium text-3xl my-16">Start testing in minutes !</p>
+        <p class="my-12 text-xl">Already have an account? <a href="/src/index.html" class="text-blue-500 underline hover:text-black hover:no-underline duration-500">Log in</a></p>
+        <span class="icon-vector flex mt-12">
+          <img src="/src/images/Instagram.png" width="40px" height="40px" class="hover:opacity-70 duration-400" />
+          <img src="/src/images/Twitter.png" width="40px" height="40px" class="mx-2 hover:opacity-70 duration-400" />
+          <img src="/src/images/Google-vector.png" width="40px" height="40px" class="hover:opacity-70 duration-400" />
+        </span>
+      </div>
+
+      <!-- Side Right -->
+      <div class="side-right w-[72%] flex justify-center">
+        <div class="flex flex-col ml-20">
+          <button class="w-[588px] h-[64px] flex items-center border-2 border-solid border-[#868091] rounded-md text-2xl p-4 hover:bg-slate-200">
+            <img src="/src/images/Google.png" class="ml-4" />
+            <span class="mx-auto">Sign up with Google</span>
+          </button>
+
+          <div class="flex items-center mt-16">
+            <hr class="w-2/4 border-black" />
+            <span class="text-2xl mx-5">or</span>
+            <hr class="w-2/4 border-black" />
+          </div>
+
+          <!-- Form Register -->
+          <form action="/src/index.html" method="post" onsubmit="return validateForm()">
+            <div class="flex justify-between my-16">
+              <div class="first-name">
+                <label class="absolute translate-x-4 -translate-y-3 z-50 bg-white px-2">First Name</label>
+                <input type="text" id="fname" name="fname" class="border border-black rounded-md p-4" />
+              </div>
+              <div class="last-name">
+                <label class="absolute translate-x-4 -translate-y-3 z-50 bg-white px-2">Last Name</label>
+                <input type="text" id="lname" name="lname" class="border border-black rounded-md p-4" />
+              </div>
+            </div>
+
+            <div class="email my-16">
+              <label class="absolute translate-x-4 -translate-y-3 z-50 bg-white px-2">Email</label>
+              <input type="email" id="email" name="email" class="w-full border border-black rounded-md p-4" />
+            </div>
+
+            <div class="password my-16">
+              <label class="absolute translate-x-4 -translate-y-3 z-50 bg-white px-2">Password</label>
+              <input type="password" id="password" name="password" class="w-full border border-black rounded-md p-4" />
+            </div>
+
+            <div class="flex justify-center items-center text-2xl font-medium my-16">
+              <input type="checkbox" class="w-[20px] h-[20px]" />&nbsp;&nbsp;&nbsp;I agree to the&nbsp;<a href="" class="text-blue-500 underline hover:text-black hover:no-underline duration-500">Terms of Service</a>&nbsp;and&nbsp;<a
+                href=""
+                class="text-blue-500 underline hover:text-black hover:no-underline duration-500"
+                >Privacy Notice</a
+              >
+            </div>
+
+            <button type="submit" value="Submit" onsubmit="validateForm()" class="w-[588px] h-[64px] bg-[#FFE061] rounded-md text-3xl hover:opacity-70 duration-300">Sign me up !</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
